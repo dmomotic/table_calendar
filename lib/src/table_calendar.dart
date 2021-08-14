@@ -200,9 +200,6 @@ class TableCalendar<T> extends StatefulWidget {
 
   /// Called when the calendar is created. Exposes its PageController.
   final void Function(PageController pageController)? onCalendarCreated;
-    
-  //Custom
-  final AvailableGestures availableGestures;
 
   /// Creates a `TableCalendar` widget.
   TableCalendar({
