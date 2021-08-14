@@ -203,12 +203,11 @@ class TableCalendar<T> extends StatefulWidget {
     
   //Custom
   final AvailableGestures availableGestures;
-  final SimpleSwipeConfig simpleSwipeConfig;
+
   /// Creates a `TableCalendar` widget.
   TableCalendar({
     Key? key,
     required AvailableGestures availableGestures,
-    required SimpleSwipeConfig simpleSwipeConfig,
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
@@ -223,6 +222,10 @@ class TableCalendar<T> extends StatefulWidget {
       CalendarFormat.twoWeeks: '2 weeks',
       CalendarFormat.week: 'Week',
     },
+    this.simpleSwipeConfig = const SimpleSwipeConfig(
+      verticalThreshold: 25.0,
+      swipeDetectionBehavior: SwipeDetectionBehavior.continuousDistinct,
+    ),
     this.headerVisible = true,
     this.daysOfWeekVisible = true,
     this.pageJumpingEnabled = false,
