@@ -204,7 +204,7 @@ class TableCalendar<T> extends StatefulWidget {
   /// Creates a `TableCalendar` widget.
   TableCalendar({
     Key? key,
-    required AvailableGestures availableGestures,
+    required this.availableGestures,
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
