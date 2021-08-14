@@ -200,10 +200,15 @@ class TableCalendar<T> extends StatefulWidget {
 
   /// Called when the calendar is created. Exposes its PageController.
   final void Function(PageController pageController)? onCalendarCreated;
-
+    
+  //Custom
+  final AvailableGestures availableGestures;
+  final SimpleSwipeConfig simpleSwipeConfig;
   /// Creates a `TableCalendar` widget.
   TableCalendar({
     Key? key,
+    required AvailableGestures availableGestures,
+    required SimpleSwipeConfig simpleSwipeConfig,
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
@@ -232,11 +237,6 @@ class TableCalendar<T> extends StatefulWidget {
     this.pageAnimationCurve = Curves.easeOut,
     this.startingDayOfWeek = StartingDayOfWeek.sunday,
     this.dayHitTestBehavior = HitTestBehavior.opaque,
-    this.availableGestures = AvailableGestures.all,
-    this.simpleSwipeConfig = const SimpleSwipeConfig(
-      verticalThreshold: 25.0,
-      swipeDetectionBehavior: SwipeDetectionBehavior.continuousDistinct,
-    ),
     this.headerStyle = const HeaderStyle(),
     this.daysOfWeekStyle = const DaysOfWeekStyle(),
     this.calendarStyle = const CalendarStyle(),
